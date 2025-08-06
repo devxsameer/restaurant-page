@@ -1,0 +1,56 @@
+/* Menu Page */
+.menu {
+  height: 100%;
+}
+.menu-items-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min(90vw, 35ch));
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  align-content: center;
+}
+.menu-item {
+  min-height: 300px;
+  background-color: white;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+.menu-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.menu-item > * {
+  background-color: white;
+  z-index: 2;
+}
+.menu-item .menu-item-price {
+  border-bottom-right-radius: 5px;
+  padding: 5px 10px;
+}
+.menu-item .menu-item-main {
+  padding: 0.5em 1em 0 1em;
+}
+.menu-item .menu-item-main p {
+  height: 0;
+  transition: all 400ms ease-in-out;
+}
+.menu-item:hover .menu-item-main p {
+  height: initial;
+}
+.menu-item:hover .menu-item-main {
+  padding: 0.5em 1em;
+}
