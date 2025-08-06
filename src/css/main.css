@@ -84,7 +84,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: #dcdde1;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
