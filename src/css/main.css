@@ -54,6 +54,8 @@ h6 {
 }
 a {
   color: inherit;
+  text-decoration: none;
+  font-weight: 600;
 }
 button {
   color: inherit;
@@ -62,20 +64,20 @@ button {
   outline: none;
 }
 button.btn {
-  background-color: white;
-  color: black;
+  color: white;
   padding: 0.2em 0.5em;
   border-radius: 0.1em;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
   margin: 0.5em 0;
+  background-color: transparent;
   border: 2px solid white;
   transition: all 300ms ease-in-out;
 }
 button.btn:hover {
-  background-color: transparent;
-  color: white;
+  color: black;
+  background-color: white;
 }
 body {
   font-family: "Outfit", sans-serif;
@@ -97,6 +99,23 @@ body {
 }
 #content {
   flex: 1;
+}
+.img-banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 50%;
+  position: relative;
+}
+.img-banner::before,
+.offer-img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
 }
 /* Header */
 header {

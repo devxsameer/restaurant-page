@@ -1,0 +1,26 @@
+.about {
+  height: 100%;
+  min-height: 80vh;
+  flex-flow: column nowrap;
+  max-width: 1000px;
+  justify-content: center;
+}
+.about > * {
+  max-inline-size: 45ch;
+}
+.about h4 {
+  font-size: 1.5rem;
+  color: rgb(25, 25, 25);
+}
+.about h2 {
+  font-size: 3rem;
+}
+.about .btn {
+  color: black;
+  margin: 1em 0;
+  border-color: black;
+}
+.about .btn:hover {
+  background-color: black;
+  color: white;
+}

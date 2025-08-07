@@ -2,6 +2,7 @@
 import "./css/main.css";
 import home from "./home.js";
 import menu from "./menu.js";
+import about from "./about.js";
 // DOM
 const navBtns = document.querySelectorAll(".nav-link");
 const contentDiv = document.querySelector("#content");
@@ -25,6 +26,6 @@ function render(page) {
   } else if (page == "menu") {
     contentDiv.innerHTML = menu();
   } else {
-    contentDiv.innerHTML = page;
+    contentDiv.innerHTML = about();
   }
 }

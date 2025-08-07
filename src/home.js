@@ -10,6 +10,14 @@ function home() {
                     <button class="btn">Reservation</button>
                 </div>
              </div>
+             <div class="offer container">
+                <div class="offer-img-wrapper"></div>
+                <div class="offer-content">
+                    <h3>Butter Naan Offer</h3>
+                    <h2>50% OFF</h2>
+                    <button class="btn">Read More</button>
+                </div>
+             </div>
             </div>`;
 }
 export default home;

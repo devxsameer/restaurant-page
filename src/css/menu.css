@@ -2,6 +2,15 @@
 .menu {
   height: 100%;
 }
+.menu .img-banner {
+  background-image: url(../images/menu.jpg);
+  height: 40vh;
+}
+.menu .img-banner .container {
+  align-items: center;
+  max-inline-size: 60ch;
+  text-align: center;
+}
 .menu-items-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, min(90vw, 35ch));
@@ -11,14 +20,10 @@
   align-content: center;
 }
 .menu-item {
-  min-height: 300px;
+  min-height: 320px;
   background-color: white;
-  background-size: cover;
-  background-position: bottom;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
   overflow: hidden;
   position: relative;
   border-radius: 5px;
@@ -26,7 +31,7 @@
     0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
-.menu-item::before {
+.menu-item .item-img-wrapper::before {
   content: "";
   position: absolute;
   top: 0;
@@ -36,24 +41,31 @@
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
+.menu-item .item-img-wrapper {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 50%;
+  transition: all 200ms ease-in-out;
+}
+.menu-item:hover .item-img-wrapper {
+  transform: scale(1.1);
+}
 .menu-item > * {
-  background-color: white;
+  background-color: rgb(246, 246, 246);
   z-index: 2;
 }
 .menu-item .menu-item-price {
   border-bottom-right-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
   padding: 5px 10px;
 }
 .menu-item .menu-item-main {
-  padding: 0.5em 1em 0 1em;
+  padding: 0.5em 1em;
 }
 .menu-item .menu-item-main p {
-  height: 0;
   transition: all 400ms ease-in-out;
-}
-.menu-item:hover .menu-item-main p {
-  height: initial;
-}
-.menu-item:hover .menu-item-main {
-  padding: 0.5em 1em;
 }
